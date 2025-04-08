@@ -1,0 +1,84 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4b0082;
+    margin: 10px 0;
+  }
+  
+  .description {
+    color: #555;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  .subscribe-btn {
+    padding: 12px 24px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: #5a4db2;
+  }
+  
+  /* ✅ Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .card-container {
+      padding: 40px 20px;
+    }
+  
+    .card {
+      width: 90%;
+      padding: 30px 15px;
+    }
+  
+    .price {
+      font-size: 22px;
+    }
+  
+    .subscribe-btn {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .price {
+      font-size: 20px;
+    }
+  
+    .description {
+      font-size: 14px;
+    }
+  
+    .subscribe-btn {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  
