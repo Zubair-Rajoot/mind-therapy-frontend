@@ -6,7 +6,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -18,9 +18,16 @@ const Login = () => {
       });
 
       const data = await res.json();
+
       if (res.ok) {
         alert("Login successful!");
-        navigate("/");
+
+        // Save the token and user data to localStorage
+        localStorage.setItem("token", data.token); // Make sure the property is 'token'
+        localStorage.setItem("user", JSON.stringify(data.user)); // Make sure the property is 'user'
+
+        // Navigate to the chatbot or profile page
+        navigate("/chatbot"); // Or replace with navigate("/profile") if you want to show the profile page after login
       } else {
         alert(data.message || "Login failed");
       }
